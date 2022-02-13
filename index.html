@@ -1,0 +1,171 @@
+<title>Landing Page </title>
+
+<style>
+  body{
+    /*have colors change as animation bounces*/
+	background: rgba(87, 44, 7, 0.9);
+/*     dark brown */
+  }
+  .font-time{
+		color: white;
+  	font-size: 5em;
+  	font-family: Helvetica, sans-serif;
+		text-align: center;
+    
+}
+  .font-date{
+    color: white;
+  	font-size: 2em;
+  	font-family: Helvetica, sans-serif;
+		text-align: center; 
+  }
+  
+  .font-d{
+    color: white;
+  	font-size: 1.5em;
+  	font-family: Helvetica, sans-serif;
+		text-align: center; 
+  }
+  
+  .font-un{
+   	color: white;
+  	font-size: 1.5em;
+  	font-family: Helvetica, sans-serif;
+  	font-weight: bold;
+		text-align: center; 
+  	padding-top: 40px;
+  }
+  
+  .font-new{
+   	color: black;
+  	font-size: 2em;
+  	font-family: Helvetica, sans-serif;
+  	font-weight: bold;
+		text-align: center; 
+  	padding-top: 40px;
+  }
+  
+  .rect{
+    position: fixed;
+    width: 100vw;
+    height: 50vh;
+		background: rgba(219, 185, 155, 0.9);
+/*     cream */
+    }
+  
+  .semicircle{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 25vw;
+    height: 50vh;
+    border-radius: 150px 150px 0 0;
+    transform: translate(-50%, -50%);
+		background: rgba(204, 223, 246, 0.9);
+/*     blue */
+  }
+  
+  .phone{
+   	position: absolute;
+  	top: 50%;
+    left: 50%;
+    width: 35vw;
+    height: 80vh; 
+    border-radius: 50px 50px 50px 50px;
+    transform: translate(-50%, -50%);
+		background: rgba(189, 185, 183, 0.6);
+  }
+  
+  .strokes{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    width: 25vw;
+    height: 2vh;
+    transform: translate(-50%, -50%);
+    background: yellow;
+  }
+  
+  .stroke1{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    width: 25vw;
+    height: 2vh;
+    transform: translate(-50%, -50%);
+    background: pink;
+  }
+  
+  .stroke2{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    width: 25vw;
+    height: 2vh;
+    transform: translate(-50%, -50%);
+		background: rgba(192, 145, 233, 0.6);
+  }
+  
+  .dismiss{
+    position: absolute;
+    top: 83%;
+    left: 43%;
+    width: 15vw;
+    height: 5vh;
+    border-radius: 20px 20px 20px 20px;
+		background: rgba(189, 185, 183, 0.6);
+  }
+  
+  @keyframes upDown {
+    0% { top: 0%; }
+    100% { top: calc(100% - 2vh); }
+  }
+  
+  @keyframes colorChange {
+    100% { background-color: rgba(87, 44, 7, 0.9); }
+    0% { background-color: rgba(219, 185, 155, 0.9); }
+  }
+  
+  .strokeAni{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    width: 100vw;
+    height: 2vh;
+    transform: translate(-50%, -50%);
+		background: rgba(236, 174, 141, 0.6);
+    
+    animation-name: upDown, colorChange;
+    animation-duration: 8s, 5s;
+    animation-delay: 0s, 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear, linear;
+    animation-direction: alternate, alternate;
+  }
+  
+</style>
+
+
+<!-- change to time.now and date now -->
+<div class="rect"></div>
+<div class="semicircle"></div>
+<div class="phone", align=center> 
+<!--   /*padding?*/ -->
+	<span class="font-un">Tap to Unlock<br></span>
+	<span class="font-time">1:32<br></span>
+	<span class="font-date">Sun, Feb 13<br></span>
+<!-- padding??   -->
+  <span class="font-new">How<br>Are<br>You<br>Today?</span>
+
+<!--  rotate the emphasization of the "how are you today"  -->
+</div>
+<div class="strokes"></div>
+<div class="stroke1"></div>
+<div class="stroke2"></div>
+<div class="dismiss", align=center>
+	<span class="font-d">Dismiss</span> 
+<!--   padding? -->
+</div>
+<div class="strokeAni"></div>
+
+
